@@ -1,3 +1,17 @@
+// ==UserScript==
+// @name         Spotify
+// @namespace    https://open.spotify.com/
+// @version      0.1
+// @description  A custom theme for YouTube
+// @author       Artem Melnik
+// @match        https://open.spotify.com/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
+// @updateURL    https://github.com/Artem-Melnik/github-universal-theme/blob/Spotify/Tampermonkey/Spotify.js
+// @downloadURL  https://github.com/Artem-Melnik/github-universal-theme/blob/Spotify/Tampermonkey/Spotify.js
+// @require      https://code.jquery.com/jquery-3.6.0.min.js
+// @require      file:///C:\Users\artem\Downloads\Test.js
+// @grant        none
+// ==/UserScript==
 'use strict';
 
 // Creates a button
