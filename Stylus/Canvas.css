@@ -1,41 +1,69 @@
 :root {
-	/* Custom variables */
-	--bg1: #0d1117;
-	--bg2: #010409;
-	--bg3: #161b22;
-	--accent: #1f6feb;
-	--text-color: #c9d1d9;
-	--borderrad: 10px;
---borderrad2: 6px;
-	/* Canvas default variables */
-	--pFBbo-background: var(--bg1);
-	--dIgyp-background: var(--bg1);
-	--voGQb-background: var(--bg1);
-	--bDBte-titleBackground: var(--bg1);
-	--ic-brand-global-nav-bgd: var(--bg2);
-	--yyQPt-background: var(--bg3);
-	--eHiXd-lightBackground: var(--accent);
-	--eHiXd-lightBorderColor: var(--accent);
-	--eHiXd-linkColor: var(--accent);
-	--ic-link-color: var(--accent);
-	--ic-brand-button--primary-bgd: var(--accent);
-	--ic-brand-button--primary-bgd-darkened-15: var(--accent);
-	--eHiXd-iconColor: var(--text-color);
-	--pFBbo-color: var(--text-color);
-	--ic-brand-font-color-dark: var(--text-color);
-	
-	--bDBte-heroBorderRadius: var(--borderrad);
+    /* Custom variables */
+    --bg1: #0d1117;
+    --bg2: #010409;
+    --bg3: #161b22;
+    --accent: #1f6feb;
+    --text-color: #c9d1d9;
+    --borderrad: 10px;
+    --borderrad2: 6px;
+    /* Canvas default variables */
+    --pFBbo-background: var(--bg1);
+    --dIgyp-background: var(--bg1);
+    --voGQb-background: var(--bg1);
+    --bDBte-titleBackground: var(--bg1);
+    --ic-brand-global-nav-bgd: var(--bg2);
+    --yyQPt-background: var(--bg3);
+    --eHiXd-lightBackground: var(--accent);
+    --eHiXd-lightBorderColor: var(--accent);
+    --eHiXd-linkColor: var(--accent);
+    --ic-link-color: var(--accent);
+    --ic-brand-button--primary-bgd: var(--accent);
+    --ic-brand-button--primary-bgd-darkened-15: var(--accent);
+    --eHiXd-iconColor: var(--text-color);
+    --pFBbo-color: var(--text-color);
+    --ic-brand-font-color-dark: var(--text-color);
+
+    --bDBte-heroBorderRadius: var(--borderrad);
 }
-body, .ic-Dashboard-header__layout, .module-sequence-footer .module-sequence-footer-content, #breadcrumbs {
-	background: var(--bg1);
+/* TODO: Enhance contrasts by adding thin border to elements */
+/* Figure out if it is better to edit the Canvas variables or to edit by element */
+/* Variables: less lines of code | Elements: possibly more resistant to breaking due to Canvas changes */
+
+body,
+.ic-Dashboard-header__layout,
+.module-sequence-footer .module-sequence-footer-content,
+#breadcrumbs {
+    background: var(--bg1);
+}
+
+div.fOyUs_bGBk, a#global_nav_dashboard_link.ic-app-header__menu-list-link {
+    background: var(--bg3);
 }
 .list-view a.active {
-	color: var(--text-color);
-	border-left: 2px solid var(--text-color);
+    color: var(--text-color);
+    border-left: 2px solid var(--text-color);
 }
-.Grouping-styles__title {
-	border-radius: var(--borderrad);
+
+.Grouping-styles__title, a#global_nav_dashboard_link.ic-app-header__menu-list-link {
+    border-radius: var(--borderrad);
 }
-.btn, .Button, .ui-button {
-	border-radius: var(--borderrad2);
+
+.btn,
+.Button,
+.ui-button {
+    border-radius: var(--borderrad2);
+}
+
+div.large.ic-Dashboard-header__layout {
+    border-bottom-color: var(--accent);
+}
+button#global_nav_courses_link.ic-app-header__menu-list-link {
+    border-radius: var(--borderrad) 0px 0px var(--borderrad);
+}
+a.fOyUs_bGBk.fbyHH_bGBk.fbyHH_bSMN {
+    color: var(--accent);
+}
+div.enRcg_bGBk.enRcg_dfBC.enRcg_pEgL.enRcg_eQnG {
+    color: var(--text-color);
 }
