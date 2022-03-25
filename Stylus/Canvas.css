@@ -4,26 +4,44 @@
     --bg2: #010409;
     --bg3: #161b22;
     --accent: #1f6feb;
+    --accent2: #238636;
+    --border: #30363d;
+    --border2: #37914a;
+    --hover: #3a81ed;
     --text-color: #c9d1d9;
     --borderrad: 10px;
     --borderrad2: 6px;
     /* Canvas default variables */
-    --pFBbo-background: var(--bg1);
-    --dIgyp-background: var(--bg1);
-    --voGQb-background: var(--bg1);
-    --bDBte-titleBackground: var(--bg1);
-    --ic-brand-global-nav-bgd: var(--bg2);
-    --yyQPt-background: var(--bg3);
+    --ic-brand-primary: var(--accent);
+    --feqxT-background: var(--accent);
+    --feqxT-focusRingColor: var(--accent);
+    --yyQPt-focusBorderColor: var(--accent);
+    --cCGLM-iconColor: var(--accent);
     --eHiXd-lightBackground: var(--accent);
     --eHiXd-lightBorderColor: var(--accent);
     --eHiXd-linkColor: var(--accent);
     --ic-link-color: var(--accent);
     --ic-brand-button--primary-bgd: var(--accent);
     --ic-brand-button--primary-bgd-darkened-15: var(--accent);
+
+    --feqxT-backgroundHover: var(--hover);
+
+    --pFBbo-background: var(--bg1);
+    --dIgyp-background: var(--bg1);
+    --voGQb-background: var(--bg1);
+    --bDBte-titleBackground: var(--bg1);
+
+    --ic-brand-global-nav-bgd: var(--bg2);
+
+    --yyQPt-background: var(--bg3);
+    --fLzZc-background: var(--bg3);
+
+    --text-color: var(--text-color);
     --eHiXd-iconColor: var(--text-color);
     --pFBbo-color: var(--text-color);
     --ic-brand-font-color-dark: var(--text-color);
 
+    --eHiXd-borderRadius: var(--borderrad2);
     --bDBte-heroBorderRadius: var(--borderrad);
 }
 /* TODO: Enhance contrasts by adding thin border to elements */
@@ -33,11 +51,11 @@
 body,
 .ic-Dashboard-header__layout,
 .module-sequence-footer .module-sequence-footer-content,
-#breadcrumbs {
+#breadcrumbs, #minical, #context-list-holder, #undated-events, .header-bar {
     background: var(--bg1);
 }
 
-div.fOyUs_bGBk, a#global_nav_dashboard_link.ic-app-header__menu-list-link {
+div.fOyUs_bGBk, a#global_nav_dashboard_link.ic-app-header__menu-list-link, .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
     background: var(--bg3);
 }
 .list-view a.active {
@@ -45,7 +63,7 @@ div.fOyUs_bGBk, a#global_nav_dashboard_link.ic-app-header__menu-list-link {
     border-left: 2px solid var(--text-color);
 }
 
-.Grouping-styles__title, a#global_nav_dashboard_link.ic-app-header__menu-list-link {
+.Grouping-styles__title, a#global_nav_dashboard_link.ic-app-header__menu-list-link, [dir="ltr"] .fLzZc_bxia {
     border-radius: var(--borderrad);
 }
 
@@ -66,4 +84,20 @@ a.fOyUs_bGBk.fbyHH_bGBk.fbyHH_bSMN {
 }
 div.enRcg_bGBk.enRcg_dfBC.enRcg_pEgL.enRcg_eQnG {
     color: var(--text-color);
+}
+button.eHiXd_bNlk.eHiXd_ycrn, button.eHiXd_bNlk[type="button"].eHiXd_ycrn {
+    background: var(--accent2);
+}
+button.eHiXd_bNlk.eHiXd_ycrn, button.eHiXd_bNlk[type="button"].eHiXd_ycrn {
+    border-color: var(--border2);
+}
+.CompletedItemsFacade-styles__root {
+    border-bottom-color: var(--doxeE-labelColor);
+}
+#minical, #context-list-holder, #undated-events, .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
+    border: 1px solid var(--border);
+    border-radius: var(--borderrad2);
+}
+#minical .fc-widget-content {
+    border: 1px solid var(--border);
 }
