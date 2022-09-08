@@ -1,9 +1,36 @@
+/* ==UserStyle==
+@name           8/20/2022, 5:32:16 PM
+@namespace      github.com/openstyles/stylus
+@version        0.9.0
+@description    A customizable theme for Spotify based on the Github theme
+@author         Artem Melnik
+
+@var 			color accent "Accent" #1f6feb
+@var			color hover-accent "Hover Accent" #1f6feb15
+@var            color bg1  "Background" #0d1117
+@var            color bg2  "Background Dark" #010409
+@var            color bg3  "Background Light" #161b22
+
+
+
+@var			text borderrad2 "Small Corner Radius" 6px
+@var 			text borderrad1 "Medium Corner Radius" 10px
+@var 			text borderrad3 "Large Corner Radius" 16px
+
+==/UserStyle== */
+
+@-moz-document domain("open.spotify.com") {
+	
+/* 	TODO: Add text color editing variable using this code: @var color text "Text Color" #fff 
+														   @var color text-dark "Dark Text Color" #b9b9b9 */
+/* 	TODO: Add transitions to elements */
+	
 :root{
-    --bg1: #0d1117;
+/*     --bg1: #0d1117; */
     --bg-alpha: 20, 21, 23;
-    --bg2: #010409;
+/*     --bg2: #010409; */
     --bg2-hover: #111317;
-    --bg3: #161b22;
+/*     --bg3: #161b22; */
     --bg4: #151618;
     --bg5: #1d1f22;
     --bg6: #0f1011;
@@ -11,29 +38,81 @@
     --scrollbar-bg: #1b1d20;
     --scrollbar-thumb: #32333b;
     --scrollbar-thumb-hover: #3c3d47;
-    --text: #fff;
-    --text-dark: #b9b9b9;
-    --accent: #1f6feb;
-    --hover-accent: #1f6feb15;
+/*     --text: #fff; */
+/*     --text-dark: #b9b9b9; */
+/*     --accent: #1f6feb; */
+/*     --hover-accent: #1f6feb15; */
     --shadow-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.22);
     --shadow-2: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     --shadow-3: 0px 5px 5px 0px rgb(0 0 0 / 30%);
     --shadow-4: 0px 4px 8px 0px #0c0d0f59;
-    --borderrad1: 10px;
-    --borderrad2: 6px;
-    --borderrad3: 16px;
+/*     --borderrad1: 10px; */
+/*     --borderrad2: 6px; */
+/*     --borderrad3: 16px; */
     --icon-height: 22px;
 }
 
+/* .vnCew8qzJq3cVGlYFXRI:hover {
+		align-items: center;
+		margin-top: 4px !important;
+		margin-bottom: 0px !important;
+		transform: scale3d(1.2, 1.2, 1.2) !important;
+	transition: all 0.3s !important;
+	transition-property: all;
+} */
+	
+.vnCew8qzJq3cVGlYFXRI:active {
+		align-items: center;
+		margin-top: 4px !important;
+		margin-bottom: 0px !important;
+		transform: scale(0.8) !important;
+	transition: all 0.3s !important;
+	transition-property: all;
+}
+
+	.RfidWIoz8FON2WhFoItU:active {
+		align-items: center;
+		margin-top: 4px !important;
+		margin-bottom: 0px !important;
+		transform: scale(0.8, 0.8) !important;
+	transition: all 0.3s !important;
+	transition-property: all;
+	}
+	
+/* Color fade for shuffle icon */
+.KVKoQ3u4JpKTvSSFtd6J.OF_3F0SQCsBtL1jSTlTA:not([disabled]):focus:not(:focus-visible):not(:hover) {
+	color: var(--accent);
+}
+	
+.KVKoQ3u4JpKTvSSFtd6J {
+	color: currentColor;
+	transition: all 0.3s !important;
+	transition-property: all;
+}
+
+/* Color fade for loop icon */
+.Vz6yjzttS0YlLcwrkoUR {
+		color: currentColor;
+		transition: all 0.3s !important;
+		transition-property: all;
+	}
+	
+/* Song hover fade animation */
+.h4HgbO_Uu1JYg5UGANeQ:hover {
+		background-color: transparent;
+		transition: all 0.4s !important;
+		transition-property: all;
+	}
+	
 /*  Outside Frame */
 
 .cover-art {
     border-radius: var(--borderrad1);
 }
-.mvRQWscG4lmAxOs4neBL, .XTkIJA5URQiX_97z10Cm, .NyIynkmMpZXSoaE3XGhA, .tUwyjggD2n5KvEtP5z1B, ol, ul {
+.mvRQWscG4lmAxOs4neBL, .XTkIJA5URQiX_97z10Cm, .NyIynkmMpZXSoaE3XGhA, .tUwyjggD2n5KvEtP5z1B, .qJOhHoRcFhHJpEQ2CwFT.koyeY6AgGRPmyPITi7yO, ol, .w699O0LgQRghXyl3bs9u {
     background: var(--bg2);
 }
-.bfQ2S9bMXr_kJjqEfcwA>:not(:last-child):not(.dZiDwJihz32GwQunXhnB), .gvLrgQXBFVW6m9MscfFA>:not(:last-child), .HcMOFLaukKJdK5LfdHh0>:not(:last-child) {
+.bfQ2S9bMXr_kJjqEfcwA>:not(:last-child):not(.dZiDwJihz32GwQunXhnB), .gvLrgQXBFVW6m9MscfFA>:not(:last-child), .HcMOFLaukKJdK5LfdHh0>:not(:last-child), .RfidWIoz8FON2WhFoItU, .uhDzVbFHyCQDH6WrWZaC, .RmO04klyCgpCtMspkDMH {
     border-radius: var(--borderrad1);
 }
 [draggable]  {
@@ -42,7 +121,7 @@
 .connect-device-list-container, .connect-device-list-content {
     border-radius: var(--borderrad1);
 }
-.connect-device-list-content, .connect-device-list-item, .SboKmDrCTZng7t4EgNoM  {
+.connect-device-list-content, .connect-device-list-item, .SboKmDrCTZng7t4EgNoM, .fVB_YDdnaDlztX7CcWTA, .BL__GuO2JsHMR6RgNfwY, .Root__main-view, .AdF5F5BxQXGeWkfceg9A, .K8PtC1Way9XetxDGwCGx {
     background: var(--bg3);
 }
 .connect-device-list-container:before {
@@ -75,11 +154,12 @@
 .wC9sIed7pfp47wZbmU6m:hover {
 	background: var(--hover-accent);
 }
-.VNztd:hover, .gnbLuy:hover, .ATUzFKub89lzvkmvhpyE:hover {
+.VNztd:hover, .gnbLuy:hover, .ATUzFKub89lzvkmvhpyE:hover, .CCeu9OfWSwIAJqA49n84, .KVKoQ3u4JpKTvSSFtd6J.OF_3F0SQCsBtL1jSTlTA, .KVKoQ3u4JpKTvSSFtd6J.OF_3F0SQCsBtL1jSTlTA:not([disabled]):hover {
 	color: var(--accent);
 }
-
-
+.AdF5F5BxQXGeWkfceg9A, .K8PtC1Way9XetxDGwCGx, .gPMZVP:hover .ButtonInner-sc-14ud5tc-0 {
+	color: var(--text);
+}
 /* Main Content */
 .encore-dark-theme .encore-bright-accent-set {
     --background-base: var(--accent);
@@ -95,14 +175,14 @@
     --background-unsafe-for-small-text-highlight: var(--accent);
     --background-unsafe-for-small-text-press: var(--accent);
 }
-.rRF_r7EyCHjZv058JACi, .rRF_r7EyCHjZv058JACi:focus, .rRF_r7EyCHjZv058JACi:hover, .control-button--active, .connect-device-list-item--active, .connect-device-list-item--active .connect-device-list-item__icon, .connect-device-list-item--active .connect-device-list-item__device-subtitle, .h4HgbO_Uu1JYg5UGANeQ.iSbqnFdjb1SuyJ3uWydl .t_yrXoUO3qGsJS4Y6iXX, .h4HgbO_Uu1JYg5UGANeQ.iSbqnFdjb1SuyJ3uWydl .VpYFchIiPg3tPhBGyynT {
+.rRF_r7EyCHjZv058JACi, .rRF_r7EyCHjZv058JACi:focus, .rRF_r7EyCHjZv058JACi:hover, .control-button--active, .connect-device-list-item--active, .connect-device-list-item--active .connect-device-list-item__icon, .connect-device-list-item--active .connect-device-list-item__device-subtitle, .h4HgbO_Uu1JYg5UGANeQ.iSbqnFdjb1SuyJ3uWydl .t_yrXoUO3qGsJS4Y6iXX, .h4HgbO_Uu1JYg5UGANeQ.iSbqnFdjb1SuyJ3uWydl .VpYFchIiPg3tPhBGyynT, .Vz6yjzttS0YlLcwrkoUR.tP0mccyU1WAa7I9PevC1 {
     color: var(--accent) !important;
 }
 
-.control-button--active-dot:after, .DFtdzavKSbEhwKYkPTa6 .DuvrswZugGajIFNXObAr .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6 .TywOcKZEqNynWecCiATc:focus .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6 .TywOcKZEqNynWecCiATc:hover .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6:focus-within .epWhU7hHGktzlO_dop6z {
+.control-button--active-dot:after, .DFtdzavKSbEhwKYkPTa6 .DuvrswZugGajIFNXObAr .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6 .TywOcKZEqNynWecCiATc:focus .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6 .TywOcKZEqNynWecCiATc:hover .epWhU7hHGktzlO_dop6z, .DFtdzavKSbEhwKYkPTa6:focus-within .epWhU7hHGktzlO_dop6z, .epWhU7hHGktzlO_dop6z, .vnCew8qzJq3cVGlYFXRI, .gPMZVP:hover .ButtonInner-sc-14ud5tc-0 {
     background-color: var(--accent);
 }
-.Z35BWOA10YGn5uc9YgAp, .Z35BWOA10YGn5uc9YgAp .WWDxafTPs4AgThdcX5jN, .Z35BWOA10YGn5uc9YgAp .zXwER4Lsqq_e7fVVaPkZ, .LunqxlFIupJw_Dkx6mNx, .g4PZpjkqEh5g7xDpCr2K {
+.Z35BWOA10YGn5uc9YgAp, .Z35BWOA10YGn5uc9YgAp .WWDxafTPs4AgThdcX5jN, .Z35BWOA10YGn5uc9YgAp .zXwER4Lsqq_e7fVVaPkZ, .LunqxlFIupJw_Dkx6mNx, .g4PZpjkqEh5g7xDpCr2K, .jtRqaoDIpIR6fEATUTyY, .Foyk_HJx16yh22JYmQ56 {
     border-radius: var(--borderrad1) !important;
 }
 .ShMHCGsT93epRGdxJp2w {
@@ -112,20 +192,23 @@
 .uebZpDr3EwDvpO0w6P9U {
     background-image: linear-gradient(rgba(0,0,0,.6) 0,var(--bg3) 100%),var(--background-noise);
 }
-.rezqw3Q4OEPB1m4rmwfw {
+.rezqw3Q4OEPB1m4rmwfw, .fEvxx8vl3zTNWsuC8lpx {
     background: var(--bg3);
 }
-.LunqxlFIupJw_Dkx6mNx, .LunqxlFIupJw_Dkx6mNx {
+.LunqxlFIupJw_Dkx6mNx, .LunqxlFIupJw_Dkx6mNx, .RmO04klyCgpCtMspkDMH {
 	background: var(--bg1)
 }
 .LunqxlFIupJw_Dkx6mNx:hover, .Z35BWOA10YGn5uc9YgAp:hover {
     background: var(--hover-accent);
 }
-.os-theme-spotify .os-viewport, .Ft1cMGlqDsCbqmXQyeKN, [dir=ltr] .Nts_ArOCGeROTDZND3M6 {
+.Ft1cMGlqDsCbqmXQyeKN, [dir=ltr] .Nts_ArOCGeROTDZND3M6 {
     background: var(--bg3);
 }
 .vzMSLXDXM8yiYziBe_UK {
     background-image: linear-gradient(rgba(22, 27, 34, .6) 0,var(--bg3) 100%),var(--background-noise);
+}
+.CoLO4pdSl8LGWyVZA00t {
+	background-image: linear-gradient(rgba(22, 27, 34, .6) 0,var(--bg3) 100%),var(--background-noise);
 }
 .h4HgbO_Uu1JYg5UGANeQ:focus-within, .h4HgbO_Uu1JYg5UGANeQ:hover {
     background-color: var(--hover-accent);
@@ -138,4 +221,151 @@
 }
 .main-view-container__scroll-node-child {
     padding-bottom: 0px;
+}
+[dir=ltr] .Upqw01TOXETOmR5Td7Dj {
+	visibility: hidden;
+}
+.Xz3tlahv16UpqKBW5HdK {
+	border-radius: 100%;
+}
+/* Glow around current song text */
+.cover-art .cover-art-image {
+	box-shadow: 60px 0 100px var(--accent);
+}
+
+.control-button--active-dot:after {
+		border-radius: var(--borderrad1);
+	}
+/* Right-click menu animation */
+@keyframes right-click-animate {
+	from {
+		transform: scale(0.85);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+.SboKmDrCTZng7t4EgNoM {
+	transform-origin: 50% 0;
+	animation: right-click-animate 0.2s;
+}
+/* Page and element load animation */
+@keyframes load-animate {
+	from {
+		transform: scale(0.97);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+.khkfPsJuVBQyL_5cLT7y>:first-child {
+		transform-origin: 25% 0;
+	animation: load-animate 0.35s;
+}
+@keyframes home-load-animate {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.I3EivnXTjYMpSbPUiYEg {
+	transform-origin: 25% 0;
+	animation: home-load-animate 0.5s;
+}
+.h4HgbO_Uu1JYg5UGANeQ {
+	transform-origin: 25% 0;
+	animation: home-load-animate 0.5s;
+}
+.iKwGKEfAfW7Rkx2_Ba4E {
+	transform-origin: 25% 0;
+	animation: home-load-animate 0.5s;
+}
+.te8hrsPnSvx9SUkzV0ME.TT1tIewS2iI8Uz8kLuQB {
+	transform-origin: 25% 0;
+	animation: home-load-animate 0.5s;
+}
+/* Searchbar width animation 
+@keyframes search-animate {
+	from {
+		width: 30%;
+ 		transform: scaleX(0.5);
+		opacity: 0;
+	}
+	to {
+		width: 100%;
+	transform: scaleX(1); 
+		opacity: 1;
+	}
+}
+*/
+.cPwEdQ {
+	transform-origin: 0% 0;
+	animation: search-animate 0.35s;
+}
+@keyframes song-title-animate {
+	from {
+		transform: translateY(15px);
+/* 		transform: scaleX(0.5); */
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+/* 		transform: scaleX(1); */
+		opacity: 1;
+	}
+}
+.RP2rRchy4i8TIp1CTmb7 {
+	transform-origin: 25% 0;
+	animation: song-title-animate 0.3s;
+}
+/* Removes footer with Spotify links */
+.cASFVN {
+	display: none;
+}
+/* Custom music playing/visualizer gif */
+.jsusuc {
+	background: var(--bg1);
+	width: 22px;
+	left: 1px;
+}
+.UIBT7E6ZYMcSDl1KL62g {
+	border-radius: 2px;
+	width: 19px;
+	height: 19px;
+	background: var(--hover-accent);
+	backdrop-filter: blur(1000px) brightness(50%) ;
+}
+.n5XwsUqagSoVk8oMiw1x {
+	display: none;
+}
+.VpYFchIiPg3tPhBGyynT {
+/* 	content: none !important; */
+	background-image: url("https://user-images.githubusercontent.com/66458748/188400619-9e1fb747-9efd-405a-8f6e-f4f3b0f25dba.gif");	
+}
+/* Bottom-left song cover shadow */
+/* .Foyk_HJx16yh22JYmQ56 {
+	box-shadow: 0px 0px 20px 0px var(--accent);
+} */
+	
+/* 	Make sidebar appear on hover */
+/* 	.Root__nav-bar {
+		width: 10px;
+	}
+	.Root__nav-bar:hover {
+		width: 100%
+	} */
+	
+	
+	.AINMAUImkAYJd4ertQxy {
+		box-shadow: 0 0 20px rgb(0 0 0 / 40%)
+	}
+	
+/* Add play button bounce animation on space key press */
 }
